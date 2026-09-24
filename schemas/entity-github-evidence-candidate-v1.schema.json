@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blackmoretechgroup.com/schemas/entity-github-evidence-candidate-v1.schema.json",
+  "title": "ENTITY GitHub Evidence Candidate v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "candidate_id", "observed_at", "source", "subject", "integrity", "claim_boundary", "candidate_sha256"],
+  "properties": {
+    "schema": {"const": "entity.github.evidence-candidate.v1"},
+    "candidate_id": {"type": "string", "pattern": "^github:"},
+    "observed_at": {"type": "string"},
+    "source": {"type": "object"},
+    "subject": {"type": "object"},
+    "integrity": {
+      "type": "object",
+      "required": ["webhook_payload_sha256"],
+      "properties": {"webhook_payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+    },
+    "claim_boundary": {"type": "object"},
+    "candidate_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

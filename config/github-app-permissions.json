@@ -1,0 +1,28 @@
+{
+  "name": "ENTITY GitHub App",
+  "permission_model": "read-only-minimum",
+  "repository_permissions": {
+    "metadata": "read",
+    "contents": "read",
+    "pull_requests": "read",
+    "checks": "read",
+    "actions": "read",
+    "statuses": "read"
+  },
+  "optional_repository_permissions": {
+    "security_events": "read",
+    "vulnerability_alerts": "read"
+  },
+  "organization_permissions": {},
+  "write_permissions": {},
+  "webhook_events": [
+    "push",
+    "pull_request",
+    "check_run",
+    "check_suite",
+    "workflow_run",
+    "release",
+    "repository",
+    "installation"
+  ]
+}
