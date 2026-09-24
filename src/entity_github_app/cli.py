@@ -2,9 +2,8 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
-from pathlib import Path
 
+from .callback_server import run_callback
 from .github_api import create_app_jwt, installation_token, repository_snapshot
 from .server import run
 from .store import EvidenceStore
@@ -21,6 +20,9 @@ def build_parser() -> argparse.ArgumentParser:
     serve.add_argument("--host", default="127.0.0.1")
     serve.add_argument("--port", type=int, default=8787)
     serve.add_argument("--db", default="entity_github_app.sqlite")
+    callback = sp.add_parser("callback")
+    callback.add_argument("--host", default="127.0.0.1")
+    callback.add_argument("--port", type=int, default=8765)
     status = sp.add_parser("status")
     status.add_argument("--db", default="entity_github_app.sqlite")
     verify = sp.add_parser("verify")
@@ -40,6 +42,9 @@ def main() -> None:
     a = build_parser().parse_args()
     if a.command == "serve":
         run(a.host, a.port, a.db)
+        return
+    if a.command == "callback":
+        run_callback(a.host, a.port)
         return
     if a.command in {"status", "verify"}:
         store = EvidenceStore(a.db)
