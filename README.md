@@ -2,7 +2,7 @@
 
 **Read-only GitHub integration for turning repository activity into normalized ENTITY evidence/provenance candidates.**
 
-[ENTITY v3.4.0](https://github.com/blackmore-technology-group/ENTITY/releases/tag/v3.4.0) · [Developer portal](https://github.com/blackmore-technology-group/ENTITY/blob/main/DEVELOPERS.md) · [Engineering evidence](https://github.com/blackmore-technology-group/ENTITY/blob/main/docs/ENGINEERING_EVIDENCE.md) · [Security](https://github.com/blackmore-technology-group/ENTITY/blob/main/SECURITY.md)
+[ENTITY v3.4.1](https://github.com/blackmore-technology-group/ENTITY/releases/tag/v3.4.1) · [Developer portal](https://github.com/blackmore-technology-group/ENTITY/blob/main/DEVELOPERS.md) · [Engineering evidence](https://github.com/blackmore-technology-group/ENTITY/blob/main/docs/ENGINEERING_EVIDENCE.md) · [Security](https://github.com/blackmore-technology-group/ENTITY/blob/main/SECURITY.md)
 
 This repository is intentionally separate from ENTITY Core. It is an adapter between GitHub and ENTITY; it does **not** redefine ENTITY identity, authority, rights, evidence, provenance, economic semantics, Global Passports or verification rules.
 
@@ -127,7 +127,7 @@ Secret/key file extensions and local databases are excluded by `.gitignore`. Rep
 
 ## ENTITY v3.4 boundary
 
-ENTITY v3.4.0 adds the Global Passport and continuous-provenance surfaces, but this adapter intentionally does not embed changing v3.4 protocol internals. Its responsibility is narrower: produce an attributed evidence candidate that ENTITY Core may ingest under its own authority, rights, evidence and verification rules.
+ENTITY v3.4.1 preserves the Global Passport and continuous-provenance surfaces while correcting protocol-origin lineage and sovereign-user bootstrap separation, but this adapter intentionally does not embed changing v3.4 protocol internals. Its responsibility is narrower: produce an attributed evidence candidate that ENTITY Core may ingest under its own authority, rights, evidence and verification rules.
 
 That separation is deliberate. GitHub can be an evidence source without becoming a sovereign authority.
 
