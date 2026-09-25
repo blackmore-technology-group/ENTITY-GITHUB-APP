@@ -53,11 +53,13 @@ Requirements:
 - OpenSSL with RSA signing support for GitHub App authentication;
 - a local test environment or a reachable HTTPS endpoint for live GitHub webhooks.
 
-Run the tests:
+Optional editable install from the repository root:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -e .
 ```
+
+The project currently declares no third-party runtime dependencies, so you can also run the tests directly from `src` without installing the package.
 
 PowerShell:
 
