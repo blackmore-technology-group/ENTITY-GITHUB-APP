@@ -125,7 +125,7 @@ Never commit:
 
 Secret/key file extensions and local databases are excluded by `.gitignore`. Repeated GitHub delivery IDs are deduplicated. Raw webhook bodies are not retained; the ledger stores a SHA-256 digest plus the minimized normalized candidate.
 
-## ENTITY v3.4 boundary
+## ENTITY v3.4.1 boundary
 
 ENTITY v3.4.1 preserves the Global Passport and continuous-provenance surfaces while correcting protocol-origin lineage and sovereign-user bootstrap separation, but this adapter intentionally does not embed changing v3.4 protocol internals. Its responsibility is narrower: produce an attributed evidence candidate that ENTITY Core may ingest under its own authority, rights, evidence and verification rules.
 
